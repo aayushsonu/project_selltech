@@ -1,0 +1,29 @@
+.btn,
+.jumbotron,
+.nav :hover {
+  border-radius: 0px;
+}
+
+body {
+  background: #343a40;
+  height: 90%;
+}
+
+.bg-dark {
+  background: #343a40 !important;
+}
+
+/* .hover:hover {
+  background-color: #e03b8b;
+} */
+
+footer {
+  /* position: fixed; */
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+}
+
+.center {
+  margin-top: 8vh;
+}
