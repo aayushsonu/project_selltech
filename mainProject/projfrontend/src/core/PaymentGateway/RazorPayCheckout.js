@@ -81,7 +81,7 @@ const RazorPayCheckout = ({
       prefill: {
         name: isAuthenticated().user.name,
         email: isAuthenticated().user.email,
-        contact: "9999999999"
+        contact: "9999999999",
       },
       theme: {
         color: "#3399cc",
@@ -92,10 +92,15 @@ const RazorPayCheckout = ({
       //   address: "I will fill this later",
       // },
     };
-    var rzp1 = new window.Razorpay(options);
-    rzp1.open();
+
+    try {
+      var rzp1 = new window.Razorpay(options);
+      rzp1.open();
+    } catch (error) {
+      console.log(error);
+    }
   };
-  return (
+  return isAuthenticated() ? (
     <div>
       <h3 className="text-white">RazorPay CheckOut ₹{getFinalPrice() * 73}</h3>
       <button
@@ -105,6 +110,13 @@ const RazorPayCheckout = ({
         Pay with Razorpay
       </button>
     </div>
+  ) : (
+    <>
+      <h3 className="text-white">RazorPay CheckOut ₹{getFinalPrice() * 73}</h3>
+      <Link to="/signin">
+        <button className="btn btn-warning">Signin</button>
+      </Link>
+    </>
   );
 };
 

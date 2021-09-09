@@ -118,7 +118,7 @@ const Signup = () => {
   return (
     <Base title="SignUp Page" description="A page for user to sign up!">
       {signUpForm()}
-      <p className="text-white text-center">{JSON.stringify(values)}</p>
+      {/* <p className="text-white text-center">{JSON.stringify(values)}</p> */}
     </Base>
   );
 };

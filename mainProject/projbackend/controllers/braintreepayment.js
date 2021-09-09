@@ -4,7 +4,7 @@ const gateway = new braintree.BraintreeGateway({
   environment: braintree.Environment.Sandbox,
   merchantId: "nd8ddj5j7dr7zp59",
   publicKey: "xg9tzdk7r8gfqvhg",
-  privateKey: "57859cf17bdda819d76dca7b28106601",
+  privateKey: process.env.BRAINTEESECRET,
 });
 
 exports.getToken = (req, res) => {

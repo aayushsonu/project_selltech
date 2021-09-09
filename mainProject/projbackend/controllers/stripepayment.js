@@ -1,11 +1,8 @@
-const stripe = require("stripe")(
-  "sk_test_51JFcdWSIEZi55WQJey5cs7WfUqnJkbknW7M5QNNwHf2xYRQQO6phmHtIM0yxPMrOB2RhZvk6bb4Ru45g32spfbZO00PQJ7NPHC"
-);
+const stripe = require("stripe")(process.env.STIPESECRET);
 const uuid = require("uuid/v4");
 
 exports.makepayment = (req, res) => {
   const { token, products } = req.body;
-  console.log("PRODUCTS", products);
 
   let amount = 0;
   products.map((p) => {
@@ -22,7 +19,7 @@ exports.makepayment = (req, res) => {
       stripe.charges
         .create(
           {
-            amount: amount*100,
+            amount: amount * 100,
             currency: "USD",
             customer: customer.id,
             receipt_email: token.email,
