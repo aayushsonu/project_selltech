@@ -3,10 +3,7 @@ const formidable = require("formidable");
 const _ = require("lodash");
 const fs = require("fs");
 const { sortBy } = require("lodash");
-<<<<<<< HEAD
-=======
 const category = require("../models/category");
->>>>>>> main
 
 exports.getProductById = (req, res, next, id) => {
   Product.findById(id)
@@ -141,11 +138,7 @@ exports.updateProduct = (req, res) => {
 
 // product Listing
 exports.getAllProducts = (req, res) => {
-<<<<<<< HEAD
-  let limit = req.query.limit ? parseInt(req.query.limit) : 8;
-=======
   let limit = req.query.limit ? parseInt(req.query.limit) : 100;
->>>>>>> main
   let sortBy = req.query.sortBy ? req.query.sortBy : "_id";
   Product.find()
     .select("-photo")
@@ -194,8 +187,6 @@ exports.updateStock = (req, res, next) => {
     next();
   });
 };
-<<<<<<< HEAD
-=======
 
 // get products by using categoryId
 
@@ -229,4 +220,3 @@ exports.getproductsByCategoryId = (req, res) => {
         });
     });
 };
->>>>>>> main

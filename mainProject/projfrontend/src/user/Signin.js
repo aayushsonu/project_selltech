@@ -22,22 +22,6 @@ const Signin = () => {
   const onSubmit = (event) => {
     event.preventDefault();
     setValues({ ...values, error: false, loading: true });
-<<<<<<< HEAD
-    signin({ email, password })
-      .then((data) => {
-        if (data && data.error) {
-          setValues({ ...values, error: data.error, loading: false });
-        } else {
-          authenticate(data, () => {
-            setValues({
-              ...values,
-              didRedirect: true,
-            });
-          });
-        }
-      })
-      .catch(err => console.log("Signin Request failed"));
-=======
     console.log(email, password);
     if (email && password) {
       signin({ email, password })
@@ -58,7 +42,6 @@ const Signin = () => {
           console.log("Signin Request failed");
         });
     }
->>>>>>> main
   };
 
   const performRedirect = () => {
@@ -112,10 +95,7 @@ const Signin = () => {
                 type="email"
                 value={email}
                 onChange={handleChange("email")}
-<<<<<<< HEAD
-=======
                 required
->>>>>>> main
               />
             </div>
             <div className="form-group">
@@ -125,10 +105,7 @@ const Signin = () => {
                 type="password"
                 value={password}
                 onChange={handleChange("password")}
-<<<<<<< HEAD
-=======
                 required
->>>>>>> main
               />
             </div>
             <div className="d-grid mt-3">

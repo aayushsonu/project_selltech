@@ -1,13 +1,4 @@
 import React from "react";
-<<<<<<< HEAD
-import Base from "../core/Base";
-
-const UserDashboard = () => {
-  return (
-    <Base title="UserDashboard page">
-      <h3>This is UserDashboard page</h3>
-      <h1 className="text-warning">This WebPage is Under Construction...</h1>
-=======
 import { isAuthenticated } from "../auth/helper";
 import Base from "../core/Base";
 
@@ -42,7 +33,6 @@ const UserDashboard = () => {
           {userProfileData()}
         </div>
       </div>
->>>>>>> main
     </Base>
   );
 };
