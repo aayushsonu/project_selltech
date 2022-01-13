@@ -66,11 +66,7 @@ const RazorPayCheckout = ({
         const { status } = response;
         console.log("STATUS", status);
         cartEmpty(() => {
-<<<<<<< HEAD
-          console.log("all is well");
-=======
           console.log("You Ordered Successfully...");
->>>>>>> main
         });
         setReload(!reload);
       })

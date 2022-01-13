@@ -9,8 +9,6 @@ export const getProducts = () => {
     })
     .catch((err) => console.log(err));
 };
-<<<<<<< HEAD
-=======
 
 export const getAllUniqueCategories = () => {
   return fetch(`${API}/products/categories`, {
@@ -41,4 +39,3 @@ export const getProductsByCategoryId = (categoryId) => {
     })
     .catch((err) => console.log(err));
 };
->>>>>>> main

@@ -14,10 +14,7 @@ import ManageProducts from "./admin/ManageProducts";
 import UpdateProduct from "./admin/UpdateProduct";
 import UpdateCateogry from "./admin/UpdateCateogry";
 import Cart from "./core/Cart";
-<<<<<<< HEAD
-=======
 import OrderProducts from "./admin/Orders";
->>>>>>> main
 
 const Routes = () => {
   return (
@@ -44,14 +41,11 @@ const Routes = () => {
           exact
           component={AddProduct}
         />
-<<<<<<< HEAD
-=======
         <AdminRoutes
           path="/admin/orders"
           exact
           component={OrderProducts}
         />
->>>>>>> main
         <AdminRoutes path="/admin/products" exact component={ManageProducts} />
         <AdminRoutes
           path="/admin/product/update/:productId"

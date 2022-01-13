@@ -17,12 +17,9 @@ export const loadCart = () => {
   if (typeof window !== undefined) {
     if (localStorage.getItem("cart")) {
       return JSON.parse(localStorage.getItem("cart"));
-<<<<<<< HEAD
-=======
     } else {
       let cart = [];
       localStorage.setItem("cart", JSON.stringify(cart));
->>>>>>> main
     }
   }
 };
@@ -52,11 +49,8 @@ export const cartEmpty = (next) => {
     next();
   }
 };
-<<<<<<< HEAD
-=======
 
 export const createCart = () => {
   let cart = [];
   localStorage.setItem("cart", JSON.stringify(cart));
 };
->>>>>>> main

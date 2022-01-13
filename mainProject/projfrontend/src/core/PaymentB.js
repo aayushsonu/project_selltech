@@ -29,14 +29,6 @@ const PaymentB = ({ products, setReload = (f) => f, reload = undefined }) => {
   const getToken = (userId, token) => {
     getmeToken(userId, token).then((res) => {
       console.log("information", res);
-<<<<<<< HEAD
-      if (res.error) {
-        setInfo({ ...info, error: res.error });
-      } else {
-        const clientToken = res.response.clientToken;
-        // console.log("token",res.response.clientToken);
-        setInfo({ clientToken: clientToken });
-=======
       try {
         if (res.error) {
           setInfo({ ...info, error: res.error });
@@ -47,7 +39,6 @@ const PaymentB = ({ products, setReload = (f) => f, reload = undefined }) => {
         }
       } catch (error) {
         console.log(error);
->>>>>>> main
       }
     });
   };

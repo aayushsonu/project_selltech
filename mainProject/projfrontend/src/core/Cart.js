@@ -2,11 +2,7 @@ import React, { useState, useEffect } from "react";
 import "../styles.css";
 import Base from "./Base";
 import Card from "./Card";
-<<<<<<< HEAD
-import { loadCart } from "./helper/cartHelper";
-=======
 import { loadCart, createCart } from "./helper/cartHelper";
->>>>>>> main
 import PaymentB from "./PaymentB";
 import RazorPayCheckout from "./PaymentGateway/RazorPayCheckout";
 import StripeCheckout from "./PaymentGateway/StripeCheckout";
@@ -52,13 +48,9 @@ const Cart = () => {
   return (
     <Base title="Cart Page" description="Ready To CheckOut">
       <div className="row text-center">
-<<<<<<< HEAD
-        <div className="col-6">{loadAllProducts()}</div>
-=======
         <div className="col-6 d-flex justify-content-center">
           {loadAllProducts()}
         </div>
->>>>>>> main
         <div className="col-6">
           <StripeCheckout products={products} setReload={setReload} />
           <br />

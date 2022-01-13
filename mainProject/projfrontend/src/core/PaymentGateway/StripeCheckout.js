@@ -49,12 +49,9 @@ const StripeCheckout = ({
         cartEmpty(() => {
           console.log("all is well");
         });
-<<<<<<< HEAD
-=======
         if (status === 200) {
           console.log("Payment Successfull");
         }
->>>>>>> main
         setReload(!reload);
       })
       .catch((err) => console.log(err));
@@ -67,11 +64,7 @@ const StripeCheckout = ({
           stripeKey="pk_test_51JFcdWSIEZi55WQJY5Y5ZjC76MlCBzBTfp3J6SvwgkBQFI7IGxGx2xX7qUIKbbDFYOQ4vRJZvoRHB2I54Eyb2mjE00EpGz3Z9D"
           token={makePayment}
           amount={getFinalPrice() * 100}
-<<<<<<< HEAD
-          name="Buy Tshirts"
-=======
           name="Buy Geeky Products"
->>>>>>> main
           shippingAddress
           billingAddress
         >

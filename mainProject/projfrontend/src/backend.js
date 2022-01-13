@@ -1,6 +1,4 @@
 export const API = process.env.REACT_APP_BACKEND;
-<<<<<<< HEAD
-=======
 
 // export const API = () => {
 //   try {
@@ -9,4 +7,3 @@ export const API = process.env.REACT_APP_BACKEND;
 //     console.log(error);
 //   }
 // };
->>>>>>> main
