@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;800&display=swap');
+
+.btn,
+.jumbotron,
+.nav :hover {
+  border-radius: 0px;
+}
+
+body {
+  background: #5da3fa;
+  height: 90%;
+  font-family: "Montserrat", sans-serif;
+}
+
+.bg-dark {
+  background: #343a40 !important;
+}
+
+.bg-main {
+  background: #5da3fa !important;
+}
+
+/* .hover:hover {
+  background-color: #e03b8b;
+} */
+
+footer {
+  /* position: fixed; */
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+}
+
+.center {
+  margin-top: 8vh;
+}
+
+.myname {
+  font-weight: 800;
+}
