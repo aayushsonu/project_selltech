@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;800&display=swap');
+
+>>>>>>> main
 .btn,
 .jumbotron,
 .nav :hover {
@@ -5,14 +10,27 @@
 }
 
 body {
+<<<<<<< HEAD
   background: #343a40;
   height: 90%;
+=======
+  background: #5da3fa;
+  height: 90%;
+  font-family: "Montserrat", sans-serif;
+>>>>>>> main
 }
 
 .bg-dark {
   background: #343a40 !important;
 }
 
+<<<<<<< HEAD
+=======
+.bg-main {
+  background: #5da3fa !important;
+}
+
+>>>>>>> main
 /* .hover:hover {
   background-color: #e03b8b;
 } */
@@ -27,3 +45,10 @@ footer {
 .center {
   margin-top: 8vh;
 }
+<<<<<<< HEAD
+=======
+
+.myname {
+  font-weight: 800;
+}
+>>>>>>> main

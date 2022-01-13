@@ -36,7 +36,11 @@ const ManageCategories = () => {
   };
 
   return (
+<<<<<<< HEAD
     <Base title="Welcome admin" description="Manage categories here">
+=======
+    <Base title="Welcome To Admin Panel" description="Manage categories ">
+>>>>>>> main
       <Link className="btn btn-info" to={`/admin/dashboard`}>
         <span className="">Admin Home</span>
       </Link>

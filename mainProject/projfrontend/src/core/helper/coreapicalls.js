@@ -9,3 +9,36 @@ export const getProducts = () => {
     })
     .catch((err) => console.log(err));
 };
+<<<<<<< HEAD
+=======
+
+export const getAllUniqueCategories = () => {
+  return fetch(`${API}/products/categories`, {
+    method: "GET",
+  })
+    .then((response) => {
+      return response.json();
+    })
+    .catch((err) => console.log(err));
+};
+
+export const getAllCategory = () => {
+  return fetch(`${API}/categories`, {
+    method: "GET",
+  })
+    .then((response) => {
+      return response.json();
+    })
+    .catch((err) => console.log(err));
+};
+
+export const getProductsByCategoryId = (categoryId) => {
+  return fetch(`${API}/products/category/${categoryId}`, {
+    method: "Get",
+  })
+    .then((response) => {
+      return response.json();
+    })
+    .catch((err) => console.log(err));
+};
+>>>>>>> main

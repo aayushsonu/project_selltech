@@ -14,8 +14,17 @@ const Card = ({
   const [redirect, setRedirect] = useState(false);
   // const [count, setCount] = useState(product.count);
 
+<<<<<<< HEAD
   const cardTitle = product ? product.name : "A photo from UnSplash";
   const cardDescription = product ? product.description : "Default Desc";
+=======
+  const cardTitle = product
+    ? product.name.slice(0, 30)
+    : "A photo from UnSplash";
+  const cardDescription = product
+    ? product.description.slice(0, 80) + "..."
+    : "Default Desc";
+>>>>>>> main
   const cardPrice = product ? product.price : "Default";
 
   const getRedirect = (redirect) => {
@@ -59,14 +68,26 @@ const Card = ({
     );
   };
   return (
+<<<<<<< HEAD
     <div className="card text-white bg-dark border border-info ">
       <div className="card-header lead">{cardTitle}</div>
+=======
+    <div
+      className="card text-white bg-light border border-info d-flex justify-content-between mb-4"
+      style={{ width: "28em" }}
+    >
+      <div className="card-header lead text-dark ">{cardTitle}</div>
+>>>>>>> main
       <div className="card-body">
         {getRedirect(redirect)}
         <div className="rounded border border-success p-2">
           <ImageHelper product={product} />
         </div>
+<<<<<<< HEAD
         <p className="lead bg-primary bg-gradient font-weight-normal text-center">
+=======
+        <p className="lead bg-light text-dark bg-gradient font-weight-normal text-center">
+>>>>>>> main
           {cardDescription}
         </p>
         <div className="d-flex flex-column">

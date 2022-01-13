@@ -3,6 +3,10 @@ const formidable = require("formidable");
 const _ = require("lodash");
 const fs = require("fs");
 const { sortBy } = require("lodash");
+<<<<<<< HEAD
+=======
+const category = require("../models/category");
+>>>>>>> main
 
 exports.getProductById = (req, res, next, id) => {
   Product.findById(id)
@@ -137,7 +141,11 @@ exports.updateProduct = (req, res) => {
 
 // product Listing
 exports.getAllProducts = (req, res) => {
+<<<<<<< HEAD
   let limit = req.query.limit ? parseInt(req.query.limit) : 8;
+=======
+  let limit = req.query.limit ? parseInt(req.query.limit) : 100;
+>>>>>>> main
   let sortBy = req.query.sortBy ? req.query.sortBy : "_id";
   Product.find()
     .select("-photo")
@@ -186,3 +194,39 @@ exports.updateStock = (req, res, next) => {
     next();
   });
 };
+<<<<<<< HEAD
+=======
+
+// get products by using categoryId
+
+exports.getproductsByCategoryId = (req, res) => {
+  Product.find()
+    .select("-photo")
+    .exec((err, prod) => {
+      if (err || !prod) {
+        return res.status(400).json({
+          error: "NO product Found",
+        });
+      }
+      const prodArr = [];
+      prod.forEach((p) => {
+        if (req.category.id == p.category) {
+          // res.json(p._id)
+          prodArr.push(p.id);
+        }
+      });
+      Product.find({
+        _id: { $in: prodArr },
+      })
+        .select("-photo")
+        .exec((err, prodByCate) => {
+          if (err || !prodByCate) {
+            return res.status(400).json({
+              error: "NO product Found",
+            });
+          }
+          res.json(prodByCate);
+        });
+    });
+};
+>>>>>>> main

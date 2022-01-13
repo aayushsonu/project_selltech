@@ -113,9 +113,20 @@ const AddProduct = () => {
   };
 
   const handleChange = (name) => (event) => {
+<<<<<<< HEAD
     const value = name === "photo" ? event.target.files[0] : event.target.value;
     formData.set(name, value);
     setValues({ ...values, [name]: value });
+=======
+    if (name === "price" && event.target.value < 0) {
+      console.log("price can not be negative");
+    } else {
+      const value =
+        name === "photo" ? event.target.files[0] : event.target.value;
+      formData.set(name, value);
+      setValues({ ...values, [name]: value });
+    }
+>>>>>>> main
   };
 
   const createProductForm = () => (
@@ -196,8 +207,13 @@ const AddProduct = () => {
   );
   return (
     <Base
+<<<<<<< HEAD
       title="Add Produc Here!"
       description="Welcome to product creation sector"
+=======
+      title="Add Products"
+      description="Welcome to product creation section"
+>>>>>>> main
       className="container bg-info bg-gradient p-4"
     >
       <Link to="/admin/dashboard" className="btn btn-md btn-dark mb-3">

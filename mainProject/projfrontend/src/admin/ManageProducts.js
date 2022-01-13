@@ -33,14 +33,22 @@ const ManageProducts = () => {
   };
 
   return (
+<<<<<<< HEAD
     <Base title="Welcome admin" description="Manage products here">
+=======
+    <Base title="Welcome To Admin Panel " description="Manage products">
+>>>>>>> main
       <h2 className="mb-4">All products:</h2>
       <Link className="btn btn-info" to={`/admin/dashboard`}>
         <span className="">Admin Home</span>
       </Link>
       <div className="row">
         <div className="col-12">
+<<<<<<< HEAD
           <h2 className="text-center text-white my-3">Total 3 products</h2>
+=======
+          <h2 className="text-center text-white my-3">ALL PRODUCTS</h2>
+>>>>>>> main
 
           {products.map((product, index) => {
             return (

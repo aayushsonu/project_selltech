@@ -10,7 +10,11 @@ const ImageHelper = ({ product }) => {
       <img
         src={imageURL}
         alt="photo"
+<<<<<<< HEAD
         style={{ maxHeight: "100%", maxWidth: "100%" }}
+=======
+        style={{ maxHeight: "100%", maxWidth: "100%", height:"12em", width:"12em" }}
+>>>>>>> main
         className="mb-3 rounded"
       />
     </div>
