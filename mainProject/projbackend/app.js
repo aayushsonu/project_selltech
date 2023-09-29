@@ -27,7 +27,7 @@ mongoose
   .then(() => {
     console.log("DB CONNECTED");
   })
-  .catch(() => console.log("There is some PROBLEM!!"));
+  .catch((err) => console.log("There is some PROBLEM!!",err));
 // myfun.run().then.catch() --> way of doing this
 
 // Middlewares
