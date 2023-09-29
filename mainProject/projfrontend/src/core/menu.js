@@ -26,6 +26,19 @@ const Menu = ({ history }) => {
               className="nav-link hover"
               to="/"
             >
+              <img
+                style={{ maxHeight: "1.5rem", maxWidth: "100%", height: "auto" }}
+                src="/images/selltech_logo_medium.png"
+                alt="logo"
+              />
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link
+              style={currenTab(history, "/")}
+              className="nav-link hover"
+              to="/"
+            >
               Home
             </Link>
           </li>
