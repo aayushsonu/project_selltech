@@ -5,8 +5,9 @@ import Base from "./Base";
 import Card from "./Card";
 import {
   getAllCategory,
-  getProducts,
+  // getProducts,
   getProductsByCategoryId,
+  getRandProducts,
 } from "./helper/coreapicalls";
 
 const Home = () => {
@@ -19,12 +20,27 @@ const Home = () => {
   // eslint-disable-next-line
   const [error, setError] = useState(false);
 
-  const loadAllProducts = () => {
-    getProducts().then((data) => {
+  // const loadAllProducts = () => {
+  //   getProducts().then((data) => {
+  //     try {
+  //       if (data.error) {
+  //         setError(data.error);
+  //       } else {
+  //         setProducts(data);
+  //       }
+  //     } catch (error) {
+  //       console.log(error);
+  //     }
+  //   });
+  // };
+
+  const loadRandProducts = () => {
+    getRandProducts().then((data) => {
       try {
         if (data.error) {
           setError(data.error);
         } else {
+          console.log(data);
           setProducts(data);
         }
       } catch (error) {
@@ -94,7 +110,8 @@ const Home = () => {
   };
 
   useEffect(() => {
-    loadAllProducts();
+    loadRandProducts();
+    // loadAllProducts();
     loadAllCategories();
     console.log(categories);
   }, []);

@@ -102,7 +102,7 @@ const RazorPayCheckout = ({
   };
   return isAuthenticated() ? (
     <div>
-      <h3 className="text-white">RazorPay CheckOut ₹{getFinalPrice() * 73}</h3>
+      <h3 className="text-dark">RazorPay CheckOut ₹{getFinalPrice() * 73}</h3>
       <button
         className="rzp-button1 btn btn-info bg-gradient"
         onClick={displayRazorpay}
@@ -112,7 +112,7 @@ const RazorPayCheckout = ({
     </div>
   ) : (
     <>
-      <h3 className="text-white">RazorPay CheckOut ₹{getFinalPrice() * 73}</h3>
+      <h3 className="text-secondary">RazorPay CheckOut ₹{getFinalPrice() * 73}</h3>
       <Link to="/signin">
         <button className="btn btn-warning">Signin</button>
       </Link>

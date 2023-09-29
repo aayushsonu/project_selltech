@@ -203,12 +203,12 @@ const AddProduct = () => {
     <Base
       title="Add Products"
       description="Welcome to product creation section"
-      className="container bg-info bg-gradient p-4"
+      className=" bg-light bg-gradient p-4"
     >
       <Link to="/admin/dashboard" className="btn btn-md btn-dark mb-3">
         Admin Home
       </Link>
-      <div className="row bg-dark text-white rounded">
+      <div className="row bg-white text-white rounded">
         <div className="col-md-8 offset-md-2">
           {successMsg()}
           {warningMsg()}

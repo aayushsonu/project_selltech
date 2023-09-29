@@ -220,3 +220,33 @@ exports.getproductsByCategoryId = (req, res) => {
         });
     });
 };
+
+// get random products by count
+
+exports.getRandomProduct = (req, res) => {
+  let limit = req.query.limit ? parseInt(req.query.limit) : 4;
+
+  Product.aggregate([
+    { $sample: { size: limit } },
+    { $project: { photo: 0 } }, // Exclude the 'photo' field
+    {
+      $lookup: {
+        from: "categories",
+        localField: "category",
+        foreignField: "_id",
+        as: "category",
+      },
+    },
+  ])
+    // .select("-photo")
+    // .populate("category")
+    // .limit(limit)
+    .exec((err, products) => {
+      if (err || !products) {
+        return res.status(400).json({
+          error: "NO product Found",
+        });
+      }
+      res.json(products);
+    });
+};

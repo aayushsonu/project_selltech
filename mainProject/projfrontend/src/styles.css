@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;800&display=swap");
 
 .btn,
 .jumbotron,
@@ -7,7 +7,8 @@
 }
 
 body {
-  background: #5da3fa;
+  /* background: #5da3fa; */
+  background: #ddd;
   height: 90%;
   font-family: "Montserrat", sans-serif;
 }
@@ -17,7 +18,9 @@ body {
 }
 
 .bg-main {
-  background: #5da3fa !important;
+  /* background: #5da3fa !important; */
+  background: #fffafa !important;
+  box-shadow: 0cap 0px 10px 0px rgba(0, 0, 0, 0.2);
 }
 
 /* .hover:hover {

@@ -14,6 +14,7 @@ const {
   getAllProducts,
   getAllUniqueCategories,
   getproductsByCategoryId,
+  getRandomProduct,
 } = require("../controllers/product");
 const { getCategoryById } = require("../controllers/category");
 
@@ -59,5 +60,7 @@ router.get("/products", getAllProducts);
 router.get("/products/categories", getAllUniqueCategories);
 
 router.get("/products/category/:categoryId", getproductsByCategoryId);
+
+router.get("/randomProducts", getRandomProduct);
 
 module.exports = router;

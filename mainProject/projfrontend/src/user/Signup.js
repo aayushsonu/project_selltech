@@ -23,7 +23,7 @@ const Signup = () => {
     setValues({ ...values, error: false });
     signup({ name, email, password })
       .then((data) => {
-        if ( data && data.error) {
+        if (data && data.error) {
           setValues({ ...values, error: data.error, success: false });
         } else {
           setValues({
@@ -41,13 +41,13 @@ const Signup = () => {
 
   const signUpForm = () => {
     return (
-      <div className="row center">
+      <div className="row py-5">
         {successMessage()}
         {errorMessage()}
         <div className="col-md-6 offset-sm-3 text-left">
           <form action="">
             <div className="form-group">
-              <label className="text-light">Name</label>
+              <label className="text-dark">Name</label>
               <input
                 className="form-control"
                 onChange={handleChange("name")}
@@ -56,7 +56,7 @@ const Signup = () => {
               />
             </div>
             <div className="form-group">
-              <label className="text-light">Email</label>
+              <label className="text-dark">Email</label>
               <input
                 className="form-control"
                 onChange={handleChange("email")}
@@ -65,7 +65,7 @@ const Signup = () => {
               />
             </div>
             <div className="form-group">
-              <label className="text-light">Password</label>
+              <label className="text-dark">Password</label>
               <input
                 className="form-control"
                 onChange={handleChange("password")}
@@ -116,7 +116,7 @@ const Signup = () => {
   };
 
   return (
-    <Base title="SignUp Page" description="A page for user to sign up!">
+    <Base title="Sign Up" description="Unlock Your Geeky Tech Adventure Here!">
       {signUpForm()}
       {/* <p className="text-white text-center">{JSON.stringify(values)}</p> */}
     </Base>

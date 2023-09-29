@@ -99,7 +99,7 @@ const AddCategory = () => {
     <Base
       title="Create Category"
       description="Add a new category for new products"
-      className="container bg-info bg-gradient p-4"
+      className="bg-light bg-gradient p-4"
     >
       <div className="row bg-white rounded">
         <div className="col-md-8 offset-md-2">

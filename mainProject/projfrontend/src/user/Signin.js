@@ -22,7 +22,7 @@ const Signin = () => {
   const onSubmit = (event) => {
     event.preventDefault();
     setValues({ ...values, error: false, loading: true });
-    console.log(email, password);
+    // console.log(email, password);
     if (email && password) {
       signin({ email, password })
         .then((data) => {
@@ -84,12 +84,12 @@ const Signin = () => {
 
   const signInForm = () => {
     return (
-      <div className="row">
+      <div className="row py-5">
         <div className="col-md-6 offset-sm-3 text-left">
           {loadingMessage()}
           <form action="">
             <div className="form-group">
-              <label className="text-light">Email</label>
+              <label className="text-dark">Email</label>
               <input
                 className="form-control"
                 type="email"
@@ -99,7 +99,7 @@ const Signin = () => {
               />
             </div>
             <div className="form-group">
-              <label className="text-light">Password</label>
+              <label className="text-dark">Password</label>
               <input
                 className="form-control"
                 type="password"
@@ -119,7 +119,7 @@ const Signin = () => {
     );
   };
   return (
-    <Base title="SignIn Page" description="A page for user to sign in!">
+    <Base title="Sign In" description="Log in with your credentials">
       {errorMessage()}
       {signInForm()}
       {performRedirect()}

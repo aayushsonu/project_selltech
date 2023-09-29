@@ -10,6 +10,16 @@ export const getProducts = () => {
     .catch((err) => console.log(err));
 };
 
+export const getRandProducts = () => {
+  return fetch(`${API}/randomProducts`, {
+    method: "GET",
+  })
+    .then((response) => {
+      return response.json();
+    })
+    .catch((err) => console.log(err));
+};
+
 export const getAllUniqueCategories = () => {
   return fetch(`${API}/products/categories`, {
     method: "GET",

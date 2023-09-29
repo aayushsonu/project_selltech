@@ -115,7 +115,7 @@ const PaymentB = ({ products, setReload = (f) => f, reload = undefined }) => {
 
   return (
     <div>
-      <h3>BrainTree CheckOut $ {getFinalPrice()}</h3>
+      <h3 className="text-secondary">BrainTree CheckOut $ {getFinalPrice()}</h3>
       {showBrainTreeDropIn()}
     </div>
   );

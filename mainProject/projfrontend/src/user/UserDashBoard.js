@@ -17,11 +17,7 @@ const UserDashboard = () => {
     );
   };
   return (
-    <Base
-      title=""
-      description=""
-      className="container bg-primary bg-gradient p-5 mb-5"
-    >
+    <Base title="" description="" className="bg-primary bg-gradient p-5 mb-3">
       <div className="d-flex">
         <div className="col-6">
           <img
